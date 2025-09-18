@@ -6,39 +6,39 @@ export default function NewDrop() {
       id: 1,
       name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
       price: 125,
-      src: "/hero/hero1.png",
+      src: "/landing/hero1.png",
     },
     {
       id: 2,
       name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
       price: 125,
-      src: "/hero/hero2.png",
+      src: "/landing/hero2.png",
     },
     {
       id: 3,
       name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
       price: 125,
-      src: "/hero/hero3.png",
+      src: "/landing/hero3.png",
     },
     {
       id: 4,
       name: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
       price: 125,
-      src: "/hero/hero4.png",
+      src: "/landing/hero4.png",
     },
   ];
 
   return (
-    <section className="flex justify-center px-4 pt-16">
+    <section className="flex justify-center px-4 pt-16 pb-20">
       <div className="max-w-[1320px] w-full flex flex-col gap-10">
         {/* Left Content */}
         <div className="flex justify-between">
-          <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight">
+          <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900">
             DON&apos;T MISS OUT
             <br /> NEW DROPS
           </h1>
 
-          <button className="mt-20 self-start px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-semibold transition cursor-pointer">
+          <button className="mt-20  px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-semibold transition cursor-pointer">
             SHOP NEW DROPS
           </button>
         </div>
@@ -69,7 +69,9 @@ export default function NewDrop() {
               </div>
 
               {/* Name */}
-              <h2 className="mt-4 font-bold text-left">{product.name}</h2>
+              <h2 className="mt-4 font-bold text-left text-black">
+                {product.name}
+              </h2>
 
               {/* Button */}
               <button className="mt-4 w-full px-4 py-2 bg-black text-white font-semibold rounded-md hover:bg-gray-900 cursor-pointer">

@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const images = [
-  "/hero/hero1.png",
-  "/hero/hero2.png",
-  "/hero/hero3.png",
-  "/hero/hero4.png",
+  "/landing/hero1.png",
+  "/landing/hero2.png",
+  "/landing/hero3.png",
+  "/landing/hero4.png",
 ];
 
 export default function Hero() {
@@ -26,13 +26,13 @@ export default function Hero() {
         <div className="relative rounded-2xl overflow-hidden">
           {/* Background image */}
           <div className="text-center">
-            <h1 className="text-8xl font-extrabold">
+            <h1 className="text-8xl font-extrabold text-gray-900">
               DO IT <span className="text-blue-600">RIGHT</span>
             </h1>
           </div>
           <div>
             <Image
-              src="/hero/slide.png"
+              src="/landing/slide.png"
               alt="Nike Air Max"
               width={700}
               height={700}
@@ -57,14 +57,14 @@ export default function Hero() {
             {/* Thumbnails */}
             <div className="absolute bottom-8 right-8 flex flex-col gap-3">
               <Image
-                src="/hero/zoom1.png"
+                src="/landing/zoom1.png"
                 alt="Nike thumb 1"
                 width={100}
                 height={100}
                 className="w-24 h-24 rounded-lg object-cover shadow-md"
               />
               <Image
-                src="/hero/zoom2.png"
+                src="/landing/zoom2.png"
                 alt="Nike thumb 2"
                 width={100}
                 height={100}
@@ -78,7 +78,7 @@ export default function Hero() {
         <div className="relative w-full h-[680px] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/hero/slide2.png"
+              src="/landing/slide2.png"
               alt="slide 2"
               width={700}
               height={700}
