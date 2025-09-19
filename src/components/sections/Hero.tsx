@@ -16,7 +16,7 @@ export default function Hero() {
   const router = useRouter();
 
   const handlePrevPage = () => {
-    router.push("/products");
+    router.push("/shops");
   };
 
   return (

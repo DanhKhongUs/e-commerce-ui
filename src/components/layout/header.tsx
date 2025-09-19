@@ -4,18 +4,36 @@ import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSearch } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import { ChangeEvent, useState } from "react";
 
 export default function Header() {
   const currentUser = true;
+
+  const [query, setQuery] = useState("");
 
   const pathname = usePathname();
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "Products", href: "/products" },
+    { label: "Shops", href: "/shops" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    if (value.startsWith(" ")) {
+      value = value.trimStart();
+    }
+    setQuery(value);
+  };
+
+  const handleSearch = () => {
+    const trimmed = query.trimStart();
+    if (!trimmed) return;
+    setQuery("");
+    console.log("Searching:", trimmed);
+  };
 
   return (
     <>
@@ -53,12 +71,26 @@ export default function Header() {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-4">
-          <button className=" text-gray-900 hover:text-gray-800 cursor-pointer">
-            <FontAwesomeIcon icon={faSearch} size="xl" />
-          </button>
-          <button className="hover:text-gray-800 cursor-pointer">
+        <div className="flex items-center gap-5">
+          <div className="flex items-center bg-white rounded-full shadow-md border px-4 py-2 w-full max-w-md">
+            <input
+              type="text"
+              placeholder="Search..."
+              value={query}
+              onChange={(e) => handleChange(e)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+              className="flex-grow bg-transparent outline-none text-gray-900 placeholder-gray-400 px-2"
+            />
+            <button className="text-gray-900 hover:text-gray-800 cursor-pointer border-l border-gray-300 pl-2">
+              <FontAwesomeIcon icon={faSearch} size="lg" />
+            </button>
+          </div>
+
+          <button className="relative hover:text-gray-800 cursor-pointer">
             <FontAwesomeIcon icon={faCartShopping} size="xl" />
+            <span className="absolute top-[-8px] right-[-8px] bg-pink-700 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">
+              5
+            </span>
           </button>
           <div>
             {currentUser ? (
