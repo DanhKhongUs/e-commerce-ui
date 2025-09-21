@@ -27,7 +27,7 @@ export default function Hero() {
           {/* Background image */}
           <div className="text-center">
             <h1 className="text-8xl font-extrabold text-gray-900">
-              DO IT <span className="text-blue-600">RIGHT</span>
+              DO IT <span className="text-[#4a69e2]">RIGHT</span>
             </h1>
           </div>
           <div>
@@ -48,7 +48,7 @@ export default function Hero() {
               </p>
               <button
                 onClick={handlePrevPage}
-                className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-semibold cursor-pointer transition"
+                className="mt-4 px-6 py-2 bg-[#4a69e2] hover:bg-blue-600 rounded-lg text-sm font-semibold cursor-pointer transition"
               >
                 SHOP NOW
               </button>

@@ -71,7 +71,7 @@ export default function Categories() {
   }, [noTransition]);
 
   return (
-    <section className="flex h-[790px] justify-center bg-[#232321] pt-12 pl-12">
+    <section className="flex h-[790px] justify-center bg-[#232321] pt-12 pl-13">
       <div className="max-w-[1440px] w-full flex flex-col gap-10 overflow-hidden">
         {/* Header */}
         <div className="flex justify-between items-center pr-16">

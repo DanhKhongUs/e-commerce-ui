@@ -38,7 +38,7 @@ export default function NewDrop() {
             <br /> NEW DROPS
           </h1>
 
-          <button className="mt-20  px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-semibold transition cursor-pointer">
+          <button className="mt-20  px-6 py-3 text-white bg-[#4a69e2] hover:bg-blue-600 rounded-lg text-sm font-semibold transition cursor-pointer">
             SHOP NEW DROPS
           </button>
         </div>
