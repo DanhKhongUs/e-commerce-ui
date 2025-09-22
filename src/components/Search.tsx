@@ -70,7 +70,7 @@ export default function Search() {
   return (
     <div ref={wrapperRef} className="relative w-full">
       {/* Input */}
-      <div className="relative flex w-full rounded-full border bg-white shadow-md max-w-md overflow-hidden">
+      <div className="relative flex w-full max-w-full sm:max-w-md lg:max-w-xl rounded-full border bg-white shadow-md overflow-hidden">
         <input
           ref={inputRef}
           value={search}

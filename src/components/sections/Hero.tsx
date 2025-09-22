@@ -21,12 +21,12 @@ export default function Hero() {
 
   return (
     <div className="flex justify-center items-center px-4">
-      <div className="max-w-[1320px] w-full grid grid-cols-1 md:grid-cols-2 items-center">
+      <div className="max-w-[1320px] w-full grid grid-cols-1 xl:grid-cols-2 gap-8 items-center">
         {/* Layout 1 */}
         <div className="relative rounded-2xl overflow-hidden">
           {/* Background image */}
           <div className="text-center">
-            <h1 className="text-8xl font-extrabold text-gray-900">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-extrabold text-gray-900 leading-tight">
               DO IT <span className="text-[#4a69e2]">RIGHT</span>
             </h1>
           </div>
@@ -36,19 +36,21 @@ export default function Hero() {
               alt="Nike Air Max"
               width={700}
               height={700}
-              className="w-full h-[680px] object-cover rounded-2xl shadow-lg"
+              className="w-full h-[420px] sm:h-[500px] md:h-[680px] object-cover rounded-2xl shadow-lg"
             />
 
             {/* Overlay text */}
-            <div className="absolute bottom-8 left-8 text-white">
-              <h2 className="text-4xl font-bold">NIKE AIR MAX</h2>
-              <p className="text-lg mt-2 max-w-md">
+            <div className="absolute bottom-6 left-4 sm:bottom-8 sm:left-8 text-white max-w-xs sm:max-w-md">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+                NIKE AIR MAX
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg mt-2">
                 Nike introducing the new air max for
                 <br /> everyone&apos;s comfort
               </p>
               <button
                 onClick={handlePrevPage}
-                className="mt-4 px-6 py-2 bg-[#4a69e2] hover:bg-blue-600 rounded-lg text-sm font-semibold cursor-pointer transition"
+                className="mt-4 px-4 sm:px-6 py-2 bg-[#4a69e2] hover:bg-blue-600 rounded-lg text-sm sm:text-base font-semibold cursor-pointer transition"
               >
                 SHOP NOW
               </button>
@@ -75,7 +77,7 @@ export default function Hero() {
         </div>
 
         {/* Layout 2 */}
-        <div className="relative w-full h-[680px] flex items-center justify-center">
+        <div className="relative w-full h-[680px] hidden xl:flex items-center justify-center ">
           <div className="absolute inset-0 z-0">
             <Image
               src="/landing/slide2.png"
@@ -87,7 +89,7 @@ export default function Hero() {
           </div>
 
           {/* Ảnh chính */}
-          <div className="relative w-[380px] h-[380px] overflow-hidden rounded-full shadow-lg z-10">
+          <div className="relative w-[280px] h-[280px] md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[380px] xl:h-[380px] overflow-hidden rounded-full shadow-lg z-10">
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}

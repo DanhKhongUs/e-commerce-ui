@@ -9,9 +9,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      body: {
-        bodyLength: "1400px",
-      },
       screens: {
         sm: "640px",
         md: "856px",

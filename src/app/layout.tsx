@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="vi" suppressHydrationWarning>
       <body>
-        <div className="min-h-screen w-[1440px] mx-auto flex flex-col bg-[#e7e7e3]">
+        <div className="min-h-screen max-w-[1440px] w-full mx-auto flex flex-col bg-[#e7e7e3]">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
