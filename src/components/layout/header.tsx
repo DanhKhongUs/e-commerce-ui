@@ -2,14 +2,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import { ChangeEvent, useState } from "react";
+import Search from "../Search";
 
 export default function Header() {
   const currentUser = true;
-
-  const [query, setQuery] = useState("");
 
   const pathname = usePathname();
 
@@ -19,21 +17,6 @@ export default function Header() {
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value;
-    if (value.startsWith(" ")) {
-      value = value.trimStart();
-    }
-    setQuery(value);
-  };
-
-  const handleSearch = () => {
-    const trimmed = query.trimStart();
-    if (!trimmed) return;
-    setQuery("");
-    console.log("Searching:", trimmed);
-  };
 
   return (
     <>
@@ -72,18 +55,8 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-5">
-          <div className="flex items-center bg-white rounded-full shadow-md border px-4 py-2 w-full max-w-md">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={query}
-              onChange={(e) => handleChange(e)}
-              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              className="flex-grow bg-transparent outline-none text-gray-900 placeholder-gray-400 px-2"
-            />
-            <button className="text-gray-900 hover:text-gray-800 cursor-pointer border-l border-gray-300 pl-2">
-              <FontAwesomeIcon icon={faSearch} size="lg" />
-            </button>
+          <div className="flex items-center">
+            <Search />
           </div>
 
           <button className="relative hover:text-gray-800 cursor-pointer">
